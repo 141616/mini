@@ -1,19 +1,19 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto flex-wrp" style="flex-direction:row;">
-    <view class="flex-item">
-      <input focus placeholder="输入密码" />
-    </view>
-    <view class="flex-item">
-      <i-button type="info" bind:click="handleOpen1">一般用法</i-button>
-      <i-button type="ghost" bind:click="handleOpen2">带有提示、异步</i-button>
-    </view>
-  </view>
+<view class="logo">
+  <image src="../../images/logo.jpg" />
 </view>
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+<i-row>
+  <i-col span="16">
+    <i-input placeholder="输入口令，进入我的图书馆"/>
+  </i-col>
+  <i-col span="8">
+    <i-button type="info" long="true">Info</i-button>
+  </i-col>
+</i-row>

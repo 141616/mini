@@ -1,19 +1,15 @@
 <!--index.wxml-->
-<view class="logo">
-  <image src="../../images/logo.jpg" />
-</view>
+
 <view class="userinfo">
   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
   <block wx:else>
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </block>
 </view>
-<i-row>
-  <i-col span="16">
-    <i-input placeholder="输入口令，进入我的图书馆"/>
-  </i-col>
-  <i-col span="8">
-    <i-button type="info" long="true">Info</i-button>
-  </i-col>
-</i-row>
+<i-panel title="{{userInfo.nickName}}">
+  <i-input value="" placeholder="输入口令，进入我的图书馆" />
+</i-panel>
+<i-panel>
+  <view style="height: 1px;"></view>
+</i-panel>
+<i-button style="margin-top: 10px;" bind:click="handleClick" type="success" shape="circle">确定</i-button>

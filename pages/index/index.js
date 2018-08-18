@@ -51,5 +51,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  handleClick: () => {
+    console.log(1)
   }
 })

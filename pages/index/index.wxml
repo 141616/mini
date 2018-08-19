@@ -7,9 +7,10 @@
   </block>
 </view>
 <i-panel title="{{userInfo.nickName}}">
-  <i-input value="" placeholder="输入口令，进入我的图书馆" />
+  <i-input bind:change="onChange"  type="text" placeholder="输入口令，进入我的图书馆" />
 </i-panel>
 <i-panel>
   <view style="height: 1px;"></view>
 </i-panel>
 <i-button style="margin-top: 10px;" bind:click="handleClick" type="success" shape="circle">确定</i-button>
+<i-toast id="toast" />

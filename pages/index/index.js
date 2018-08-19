@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const { $Toast } = require('../../components/base/index')
 
 Page({
   data: {
@@ -8,7 +9,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    myLib: '我的图书馆'
+    myLib: '我的图书馆',
+    passCode: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -52,7 +54,21 @@ Page({
       hasUserInfo: true
     })
   },
-  handleClick: () => {
-    console.log(1)
+  handleClick: function () {
+    if (this.data.passCode === '') {
+      wx.navigateTo({ url: '../home/index' })
+    } else {
+      // $Toast({ content: '口令错误' })
+      wx.showToast({
+        title: '口令错误',
+        icon: false
+      })
+    }
+  },
+  onChange: function (e) {
+    const passCode = e.detail.detail.value
+    this.setData({
+      passCode
+    })
   }
 })

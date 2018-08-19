@@ -1,3 +1,8 @@
-<view class="test">
-    new Page
+<view>
+  <block wx:for="{{myPackages}}" wx:key="{{index}}">
+    <i-card title="{{item.name}}" extra="额外内容" thumb="{{userInfo.avatarUrl}}">
+      <view slot="content">内容不错</view>
+      <view slot="footer">尾部内容</view>
+    </i-card>
+  </block>
 </view>

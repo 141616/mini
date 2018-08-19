@@ -6,6 +6,7 @@
     "i-button": "../../components/button/index",
     "i-panel": "../../components/panel/index",
     "i-row": "../../components/row/index",
+    "i-toast": "../../components/toast/index",
     "i-col": "../../components/col/index"
   }
 }

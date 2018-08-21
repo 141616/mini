@@ -1,0 +1,6 @@
+var format = function (time) {
+  return getDate(time).toLocaleDateString()
+}
+module.exports = {
+  format: format
+}

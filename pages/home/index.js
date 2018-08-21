@@ -21,6 +21,10 @@ Page({
     this.setData({
       myPackages: PACKAGES
     })
-    console(this.data.myPackages)
+  },
+  dataFormat: function(time) {
+    // const date = new Date(time)
+    console.log(new Date(time).toLocaleDateString())
+    return new Date(time).toLocaleDateString()
   }
 })

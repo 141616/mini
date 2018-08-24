@@ -1,0 +1,21 @@
+<view class="pack">
+  <i-panel title="概览">
+    <i-cell-group>
+      <i-cell title="技术类" is-link></i-cell>
+      <i-cell title="文学类" is-link></i-cell>
+      <i-cell title="数学类" is-link></i-cell>
+      <i-cell title="科学类" is-link></i-cell>
+      <i-cell title="文史类" is-link></i-cell>
+      <i-cell title="其他" is-link></i-cell>
+      <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+    </i-cell-group>
+  </i-panel>
+
+  <i-panel title="借阅记录">
+    <i-cell-group>
+      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+    </i-cell-group>
+  </i-panel>
+</view>

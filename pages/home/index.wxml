@@ -1,7 +1,13 @@
 <wxs src="./index.wxs" module="home" />
 <view>
   <block wx:for="{{myPackages}}" wx:key="{{index}}">
-    <i-card class="package-item" title="{{item.name}}" extra="{{home.format(item.create_time)}}" thumb="{{userInfo.avatarUrl}}">
+    <i-card
+      data-package="{{item}}"
+      bindtap="handleTap"
+      class="package-item"
+      title="{{item.name}}"
+      extra="{{home.format(item.create_time)}}"
+      thumb="{{userInfo.avatarUrl}}">
       <view slot="content">内容不错</view>
       <view slot="footer">尾部内容</view>
     </i-card>

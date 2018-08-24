@@ -22,9 +22,8 @@ Page({
       myPackages: PACKAGES
     })
   },
-  dataFormat: function(time) {
-    // const date = new Date(time)
-    console.log(new Date(time).toLocaleDateString())
-    return new Date(time).toLocaleDateString()
+  handleTap: function(e) {
+    console.log(e.target)
+    wx.navigateTo({ url: '../pack/index' })
   }
 })

@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/home/index",
+    "pages/pack/index",
     "pages/logs/logs"
   ],
   "window":{

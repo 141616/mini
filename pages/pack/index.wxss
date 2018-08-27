@@ -1,3 +1,10 @@
 .pack {
   background-color: #f9f9f9;
 }
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}

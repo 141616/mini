@@ -1,21 +1,61 @@
 <view class="pack">
-  <i-panel title="概览">
-    <i-cell-group>
-      <i-cell title="技术类" is-link></i-cell>
-      <i-cell title="文学类" is-link></i-cell>
-      <i-cell title="数学类" is-link></i-cell>
-      <i-cell title="科学类" is-link></i-cell>
-      <i-cell title="文史类" is-link></i-cell>
-      <i-cell title="其他" is-link></i-cell>
-      <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
-    </i-cell-group>
-  </i-panel>
+  <view class="home" hidden="{{ current !== 'homepage'}}">
+    <i-panel title="概览">
+      <i-cell-group>
+        <i-cell title="技术类" is-link></i-cell>
+        <i-cell title="文学类" is-link></i-cell>
+        <i-cell title="数学类" is-link></i-cell>
+        <i-cell title="科学类" is-link></i-cell>
+        <i-cell title="文史类" is-link></i-cell>
+        <i-cell title="其他" is-link></i-cell>
+        <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+      </i-cell-group>
+    </i-panel>
+  </view>
 
-  <i-panel title="借阅记录">
-    <i-cell-group>
-      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
-      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
-      <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
-    </i-cell-group>
-  </i-panel>
+  <view class="activity" hidden="{{ current !== 'activity'}}">
+    <i-panel title="新增书籍">
+      <i-cell-group>
+        <i-cell title="xxx书籍" value="10本" label="2018/8/24 京东"></i-cell>
+        <i-cell title="xxx书籍" value="20本" label="2018/8/24 淘宝"></i-cell>
+        <i-cell title="xxx书籍" value="30本" label="2018/8/24 当当网"></i-cell>
+      </i-cell-group>
+    </i-panel>
+
+    <i-panel title="借阅书籍">
+      <i-cell-group>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24 王五"></i-cell>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24 李四"></i-cell>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24 张三"></i-cell>
+      </i-cell-group>
+    </i-panel>
+  </view>
+
+  <view class="notice" hidden="{{ current !== 'remind'}}">
+    <i-panel title="我的消息">
+      <i-cell-group>
+        <i-cell title="xxx书籍" value="带审批" label="2018/8/24"></i-cell>
+        <i-cell title="xxx书籍" value="待领取" label="2018/8/24"></i-cell>
+        <i-cell title="xxx书籍" value="已取消" label="2018/8/24"></i-cell>
+      </i-cell-group>
+    </i-panel>
+  </view>
+
+  <view class="mine" hidden="{{ current !== 'mine'}}">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <i-panel title="我的借阅记录">
+      <i-cell-group>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24"></i-cell>
+      </i-cell-group>
+    </i-panel>
+  </view>
+
+  <i-tab-bar current="{{ current }}" fixed="true" bindchange="handleChange">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" ></i-tab-bar-item>
+    <i-tab-bar-item key="activity" icon="activity" current-icon="activity_fill" ></i-tab-bar-item>
+    <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" count="3"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" dot ></i-tab-bar-item>
+  </i-tab-bar>
 </view>

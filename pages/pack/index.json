@@ -2,6 +2,8 @@
   "usingComponents": {
     "i-cell-group": "../../components/cell-group/index",
     "i-panel": "../../components/panel/index",
-    "i-cell": "../../components/cell/index"
+    "i-cell": "../../components/cell/index",
+    "i-tab-bar": "../../components/tab-bar/index",
+    "i-tab-bar-item": "../../components/tab-bar-item/index"
   }
 }

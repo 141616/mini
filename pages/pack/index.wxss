@@ -8,3 +8,7 @@
   margin: 20rpx;
   border-radius: 50%;
 }
+.m-label {
+  height: 32px;
+  line-height: 32px;
+}

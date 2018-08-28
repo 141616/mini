@@ -2,29 +2,35 @@
   <view class="home" hidden="{{ current !== 'homepage'}}">
     <i-panel title="概览">
       <i-cell-group>
-        <i-cell title="技术类" is-link></i-cell>
-        <i-cell title="文学类" is-link></i-cell>
-        <i-cell title="数学类" is-link></i-cell>
-        <i-cell title="科学类" is-link></i-cell>
-        <i-cell title="文史类" is-link></i-cell>
-        <i-cell title="其他" is-link></i-cell>
-        <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+        <block wx:for="{{kinds}}" wx:key="{{index}}">
+          <i-cell is-link >
+            <i-row>
+              <i-col span="4">
+                <i-avatar src="{{userInfo.avatarUrl}}" size="default"></i-avatar>
+              </i-col>
+              <i-col span="20">
+                <view class="m-label">{{item}}</view>
+              </i-col>
+            </i-row>
+          </i-cell>
+        </block>
       </i-cell-group>
     </i-panel>
   </view>
 
   <view class="activity" hidden="{{ current !== 'activity'}}">
     <i-panel title="新增书籍">
-      <i-cell-group>
-        <i-cell title="xxx书籍" value="10本" label="2018/8/24 京东"></i-cell>
-        <i-cell title="xxx书籍" value="20本" label="2018/8/24 淘宝"></i-cell>
-        <i-cell title="xxx书籍" value="30本" label="2018/8/24 当当网"></i-cell>
-      </i-cell-group>
+      <i-card
+        class="package-item"
+        title="技术类"
+        thumb="{{userInfo.avatarUrl}}">
+      </i-card>
     </i-panel>
 
     <i-panel title="借阅书籍">
       <i-cell-group>
-        <i-cell title="xxx书籍" value="1本" label="2018/8/24 王五"></i-cell>
+        <i-cell title="xxx书籍" value="1本" label="2018/8/24 王五">
+        </i-cell>
         <i-cell title="xxx书籍" value="1本" label="2018/8/24 李四"></i-cell>
         <i-cell title="xxx书籍" value="1本" label="2018/8/24 张三"></i-cell>
       </i-cell-group>

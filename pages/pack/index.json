@@ -4,6 +4,10 @@
     "i-panel": "../../components/panel/index",
     "i-cell": "../../components/cell/index",
     "i-tab-bar": "../../components/tab-bar/index",
-    "i-tab-bar-item": "../../components/tab-bar-item/index"
+    "i-tab-bar-item": "../../components/tab-bar-item/index",
+    "i-avatar": "../../components/avatar/index",
+    "i-card": "../../components/card/index",
+    "i-row": "../../components/row/index",
+    "i-col": "../../components/col/index"
   }
 }

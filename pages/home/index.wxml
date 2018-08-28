@@ -8,8 +8,7 @@
       title="{{item.name}}"
       extra="{{home.format(item.create_time)}}"
       thumb="{{userInfo.avatarUrl}}">
-      <view slot="content">内容不错</view>
-      <view slot="footer">尾部内容</view>
+      <view slot="content">内容描述</view>
     </i-card>
   </block>
 </view>
